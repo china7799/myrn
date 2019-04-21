@@ -3,7 +3,7 @@
  * @Author: Jason
  * @LastEditors: Jason
  * @Date: 2019-03-09 23:06:28
- * @LastEditTime: 2019-04-21 04:42:03
+ * @LastEditTime: 2019-04-21 20:36:27
  */
 /**
  * Sample React Native App
@@ -46,8 +46,9 @@ export default class App extends Component<Props> {
     this.setState({ form: values })
   }
 
-  componentWillUnmount() {
-    Orientation.lockToPortrait();
+  componentWillMount() {
+    //Orientation.lockToPortrait();//只允许竖屏
+    Orientation.lockToLandscape();//只允许横屏
   }
   
   render() {
